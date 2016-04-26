@@ -10,12 +10,12 @@ namespace Gliese0
 	{
 		static void Main(string[] args)
 		{
-			TowSum t = new TowSum();
+			TowSum tsum = new TowSum();
 
 			var intArr = new int[] { 3, 2, 1, 3, 4, 5 };
 			var target = 9;
 
-			PrintArray(t.TwoSum(intArr, target));
+			PrintArray(tsum.TwoSum(intArr, target));
 			Console.ReadLine();
 		}
 
