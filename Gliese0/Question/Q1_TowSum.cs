@@ -14,7 +14,7 @@ namespace Gliese0
 	//Because nums[0] + nums[1] = 2 + 7 = 9,
 	//return [0, 1].
 	/// </summary>
-	public class TowSum
+	public class Q1_TowSum
 	{
 		public int[] TwoSum(int[] nums, int target)
 		{
