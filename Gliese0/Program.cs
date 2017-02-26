@@ -1,28 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using Gliese0.Question;
 
 namespace Gliese0
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-			TowSum tsum = new TowSum();
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var question = new Q2_Add2Nums();
 
-			var intArr = new int[] { 3, 2, 1, 3, 4, 5 };
-			var target = 9;
+            var l1 = new ListNode(2);
+            l1.next = new ListNode(4);
+            l1.next.next = new ListNode(3);
 
-			PrintArray(tsum.TwoSum(intArr, target));
-			Console.ReadLine();
-		}
+            var l2 = new ListNode(5);
+            l2.next = new ListNode(6);
+            l2.next.next = new ListNode(4);
 
-		static void PrintArray(int[] array)
-		{
-			foreach (var i in array)
-				Console.Write(i + " ");
-		}
-	}
+            PrintArray(question.AddTwoNumbers(l1, l2));
+            Console.ReadLine();
+        }
+
+        static void PrintArray(int[] array)
+        {
+            foreach (var i in array)
+                Console.Write(i + " ");
+        }
+
+        static void PrintArray(ListNode node)
+        {
+            var builder = new StringBuilder();
+            while (node != null)
+            {
+                builder.Append(node.val + " ");
+                node = node.next;
+            }
+            Console.WriteLine(builder.ToString());
+        }
+    }
 }
