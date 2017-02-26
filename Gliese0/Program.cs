@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Text;
-using Gliese0.Question;
+using Gliese0.Leetcode;
 
 namespace Gliese0
 {

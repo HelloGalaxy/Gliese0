@@ -1,4 +1,4 @@
-﻿namespace Gliese0.Question
+﻿namespace Gliese0.Leetcode
 {
     //Definition for singly-linked list.
     public class ListNode
@@ -19,8 +19,8 @@
     {
         public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
-            ListNode result = null;
-            ListNode indicator = result;
+            var head = new ListNode(0);
+            var indicator = head;
             var carry = 0;
             while (l1 != null || l2 != null)
             {
@@ -49,16 +49,8 @@
                 }
 
                 var tmp = new ListNode(sum);
-                if (result != null)
-                {
-                    indicator.next = tmp;
-                    indicator = indicator.next;
-                }
-                else
-                {
-                    result = tmp;
-                    indicator = result;
-                }
+                indicator.next = tmp;
+                indicator = indicator.next;
 
                 l1 = l1?.next;
                 l2 = l2?.next;
@@ -67,17 +59,10 @@
             if (carry > 0)
             {
                 var tmp = new ListNode(carry);
-                if (result != null)
-                {
-                    indicator.next = tmp;
-                }
-                else
-                {
-                    result = tmp;
-                }
+                indicator.next = tmp;
             }
 
-            return result;
+            return head.next;
         }
 
         //	public ListNode AddTwoNumbers(ListNode l1, ListNode l2)

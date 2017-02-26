@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Gliese0.Question
+namespace Gliese0.Leetcode
 {
     /*
     Implement atoi to convert a string to an integer.

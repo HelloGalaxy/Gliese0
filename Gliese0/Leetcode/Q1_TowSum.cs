@@ -1,4 +1,4 @@
-﻿namespace Gliese0
+﻿namespace Gliese0.Leetcode
 {
 	/// <summary>
 	/// Given an array of integers, return indices of the two numbers such that they add up to a specific target.
