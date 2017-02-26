@@ -1,17 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gliese0.Question
 {
-    class Q8_StringToInteger
-    {
-        char[] headChars = { ' ', '+', '-' };
-        char[] numChars = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+    /*
+    Implement atoi to convert a string to an integer.
 
-        Queue<char> nums;
+    Hint: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the possible input cases.
+
+    Notes: It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the input requirements up front.
+    */
+
+    internal class Q8_StringToInteger
+    {
+        private char[] headChars = { ' ', '+', '-' };
+        private char[] numChars = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
+        private Queue<char> nums;
 
         public int MyAtoi(string str)
         {
@@ -20,7 +25,7 @@ namespace Gliese0.Question
             return GenerateNum();
         }
 
-        void FindoutAvailbeChars(string str)
+        private void FindoutAvailbeChars(string str)
         {
             foreach (var c in str)
             {
@@ -36,9 +41,8 @@ namespace Gliese0.Question
             }
         }
 
-        int GenerateNum()
+        private int GenerateNum()
         {
-
             if (nums.Count == 0 ||
                 (nums.Count == 1 && (nums.Peek() == '+' || nums.Peek() == '-')))
                 return 0;
@@ -50,16 +54,17 @@ namespace Gliese0.Question
 
             while (nums.Count > 0)
             {
-
                 var c = nums.Dequeue();
                 switch (c)
                 {
                     case '+':
                         factor = 1;
                         break;
+
                     case '-':
                         factor = -1;
                         break;
+
                     default:
                         num = int.Parse(c + "");
                         break;
@@ -82,17 +87,17 @@ namespace Gliese0.Question
             return sum;
         }
 
-        bool IsTopOverFlow(int num, int added)
+        private bool IsTopOverFlow(int num, int added)
         {
             return int.MaxValue - num < added;
         }
 
-        bool IsBottomOverFlow(int num, int added)
+        private bool IsBottomOverFlow(int num, int added)
         {
             return int.MinValue - num > added;
         }
 
-        bool IsHeadChar(char c)
+        private bool IsHeadChar(char c)
         {
             foreach (var h in headChars)
             {
@@ -102,7 +107,7 @@ namespace Gliese0.Question
             return false;
         }
 
-        bool IsNumChar(char c)
+        private bool IsNumChar(char c)
         {
             foreach (var h in numChars)
             {

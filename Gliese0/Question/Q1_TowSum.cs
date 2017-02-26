@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Gliese0
+﻿namespace Gliese0
 {
 	/// <summary>
 	/// Given an array of integers, return indices of the two numbers such that they add up to a specific target.

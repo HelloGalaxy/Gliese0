@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Gliese0.Question
+﻿namespace Gliese0.Question
 {
-
 	//Definition for singly-linked list.
 	public class ListNode
 	{
@@ -15,8 +8,7 @@ namespace Gliese0.Question
 		public ListNode(int x) { val = x; }
 	}
 
-
-	/*
+    /*
 	 * You are given two linked lists representing two non-negative numbers.
 	 * The digits are stored in reverse order and each of their nodes contain a single digit. 
 	 * Add the two numbers and return it as a linked list.
