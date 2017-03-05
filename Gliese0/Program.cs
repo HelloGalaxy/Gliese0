@@ -9,7 +9,7 @@ namespace Gliese0
         static void Main(string[] args)
         {
             var q7 = new Q7_ReverseInteger();
-            var input = 1563847412;
+            var input = 1534236469;// 1563847412;
             Console.Write(string.Format("input {0} the get  {1}", input, q7.Reverse(input)));
             //var question = new Q2_Add2Nums();
 
