@@ -13,7 +13,7 @@
             var reverse = 0;
             while (x != 0)
             {
-                // 最大数字和置反数查个10倍的就要挂了
+                // 最大数字和置反数最后一步差个10倍的就要挂了
                 if (reverse != 0 && (10 > int.MaxValue / reverse && 10 > -int.MaxValue / reverse))
                 {
                     return 0;
